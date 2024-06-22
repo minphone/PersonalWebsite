@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --dark-bg-color: #000;
+    --dark-text-color: #fff;
+    --light-bg-color: #fff;
+    --light-text-color: #000;
+    --dark-highlight-color: #93E736;
+    --light-highlight-color: #679F38;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: all .40 ease;
+}
+
+header.sticky {
+    background: var(--dark-bg-color);
+    border-bottom: 1px solid #2f2f2f;
+    transition: .3s;
+}
+
+.logo img {
+    width: auto;
+    height: 70px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--dark-text-color);
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--dark-highlight-color);
+    text-shadow: 0 0 5px #fff;;
+}
+
+#menu-icon {
+    font-size: 36px;
+    color: var(--dark-text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 25vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    align-items: center;
+    min-height: auto;
+}
+
+.home-text h1{
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.home-text h3 {
+    font-size: 25px;
+    -webkit-text-stroke: .5px #93E736;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+}
+
+.home-text p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.home-text {
+    color: white;
+    max-width: 600px;
+    height: 220px;
+    text-align: left;
+}
+
+.button {
+    margin: 25px 0 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 0.5rem;
+    background: var(--dark-highlight-color);
+    color: var(--light-text-color);
+    border-radius: 40px;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px #fff;
+    transition: all .40s ease;
+}
+
+.btn:hover {
+    transform: scale(1.01) translateY(-5px);
+    color: var(--dark-text-color);
+    background: transparent;
+    border: 3px solid var(--dark-highlight-color);
+}
+
+
+.about {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: [first-start] 25% [line2] auto [end];
+    align-items: center;
+    gap: 2rem;
+    padding-top: 15rem;
+}
+
+.about-text h4 {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.about-img img {
+    height: auto;
+    width: 100%;
+    max-width: 460px;
+}
+
+.skill {
+    height: 100px;
+    width: 100%;
+}
+
+.skill a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: var(--light-bg-color);
+    border: 2px solid var(--dark-highlight-color);
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--light-highlight-color);
+    text-decoration: none;
+    margin-left: 12px;
+    transition: .5s;
+}
+
+.skill a:hover {
+    background: #93E736;
+    color: #fff;
+    border-color: #93E736;
+    box-shadow: 0 0 10px #93E736;
+}
+
+.skill p {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.experience .title {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    padding-bottom: 0;
+}
+
+.experience .experience-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.experience-row .experience-column {
+    flex: 1 1 40rem;
+}
+
+.experience-column .experience-box {
+    border-left: .2rem solid #45691c ;
+}
+
+.experience-box .experience-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.experience-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+
+.experience-content .content .year {
+    font-size: 15px;
+    padding-bottom: .5rem;
+}
+
+.experience-content .content .year i {
+    padding-right: .5rem;
+    color: var(--dark-highlight-color);
+}
+
+.experience-content .content h3{
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-text-stroke: .5px #93E736;
+}
+
+.experience-content .content p {
+    font-size: 13px;
+    padding-top: .5rem;
+}
+
+.education .title {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    padding-top: 0;
+}
+
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education-row .education-column {
+    flex: 1 1 40rem;
+}
+
+.education-column .education-box {
+    border-left: .2rem solid #45691c ;
+}
+
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+
+.education-content .content .year {
+    font-size: 15px;
+    padding-bottom: .5rem;
+}
+
+.education-content .content .year i {
+    padding-right: .5rem;
+    color: var(--dark-highlight-color);
+}
+
+.education-content .content h3{
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-text-stroke: .5px #93E736;
+}
+
+.education-content .content p {
+    font-size: 13px;
+    padding-top: .5rem;
+}
