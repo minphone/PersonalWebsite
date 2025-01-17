@@ -276,6 +276,11 @@ section {
     padding-top: .5rem;
 }
 
+.content p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .education .title {
     margin: 10px 0;
     font-size: 25px;
