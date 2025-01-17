@@ -337,3 +337,7 @@ section {
     font-size: 13px;
     padding-top: .5rem;
 }
+
+.circular_image {
+    border-radius: 50%;
+}
